@@ -140,22 +140,23 @@ const HomePage: React.FC = () => {
             <div className="home-page" ref={heroRef}>
                 <div className="hero-content">
                     <div className="hero-title" ref={titleRef}>
-                        <h1 className="main-title" data-text="PORTFOLIO">
-                            {createChars('PORTFOLIO')}
+                        <h1 className="main-title" data-text="CREATIVE DEVELOPER">
+                            {createChars('CREATIVE')} <br />
+                            {createChars('DEVELOPER')}
                         </h1>
                     </div>
 
                     <div className="hero-subtitle" ref={subtitleRef}>
-                        <h2>CREATIVE DEVELOPER</h2>
+                        <h2> Explore More 👇 </h2>
                     </div>
 
-                    <div className="hero-description" ref={descriptionRef}>
-                        <p>
-                            Crafting immersive digital experiences through
-                            <br />
-                            innovative design and cutting-edge technology
-                        </p>
-                    </div>
+                    {/*<div className="hero-description" ref={descriptionRef}>*/}
+                    {/*    <p>*/}
+                    {/*        Crafting immersive digital experiences through*/}
+                    {/*        <br />*/}
+                    {/*        innovative design and cutting-edge technology*/}
+                    {/*    </p>*/}
+                    {/*</div>*/}
 
                     <div className="hero-cta" ref={ctaRef}>
                         <button className="explore-btn" onClick={scrollToNext}>
