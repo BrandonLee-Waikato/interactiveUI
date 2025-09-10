@@ -182,6 +182,117 @@ const HomePage: React.FC = () => {
                 </div>
             </div>
 
+            {/* 技术栈横幅 */}
+            <div className="tech-stack-section">
+                <div className="tech-banner tech-banner-1">
+                    <div className="tech-scroll">
+                        <div className="tech-item">
+                            <i className="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-typescript-plain colored"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-docker-plain colored"></i>
+                            <span>Docker</span>
+                        </div>
+                        {/* 重复一遍以实现无缝滚动 */}
+                        <div className="tech-item">
+                            <i className="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-typescript-plain colored"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-docker-plain colored"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="tech-banner tech-banner-2">
+                    <div className="tech-scroll tech-scroll-reverse">
+                        <div className="tech-item">
+                            <i className="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-postgresql-plain colored"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-redis-plain colored"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-aws-original colored"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-kubernetes-plain colored"></i>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                        {/* 重复一遍以实现无缝滚动 */}
+                        <div className="tech-item">
+                            <i className="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-postgresql-plain colored"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-redis-plain colored"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-aws-original colored"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-kubernetes-plain colored"></i>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* 占位内容用于测试滚动 */}
             <div className="placeholder-content">
                 <h2>Next Section</h2>

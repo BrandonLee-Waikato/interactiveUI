@@ -315,3 +315,99 @@
         font-size: 1rem;
     }
 }
+
+
+/* 技术栈横幅 */
+.tech-stack-section {
+    background: #0f0f0f;
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.tech-banner {
+    height: 80px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(90deg, rgba(74, 144, 226, 0.05) 0%, rgba(123, 104, 238, 0.05) 100%);
+    border-top: 1px solid rgba(74, 144, 226, 0.1);
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.tech-scroll {
+    display: flex;
+    align-items: center;
+    animation: scrollTech 30s linear infinite;
+    white-space: nowrap;
+}
+
+.tech-scroll-reverse {
+    animation: scrollTechReverse 25s linear infinite;
+}
+
+.tech-banner:hover .tech-scroll {
+    animation-play-state: paused;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tech-item:hover {
+    color: #4a90e2;
+    transform: scale(1.1);
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.3));
+}
+
+@keyframes scrollTech {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollTechReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tech-stack-section {
+        padding: 2rem 0;
+    }
+
+    .tech-banner {
+        height: 60px;
+    }
+
+    .tech-item {
+        margin-right: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .tech-item i {
+        font-size: 2rem;
+        margin-right: 0.5rem;
+    }
+}
