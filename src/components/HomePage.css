@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+            radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+            linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    animation: bgPulse 8s ease-in-out infinite;
+}
+
+@keyframes bgPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+.main-title {
+    font-size: clamp(4rem, 12vw, 12rem);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: #ff8c42;
+    text-shadow:
+            0 0 5px rgba(255, 140, 66, 0.9),
+            0 0 15px rgba(255, 140, 66, 0.7),
+            0 0 25px rgba(255, 140, 66, 0.5),
+            0 0 35px rgba(255, 102, 0, 0.4),
+            0 0 45px rgba(255, 69, 0, 0.3);
+}
+
+@keyframes titleShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.char {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    display: inline-block;
+    position: relative;
+}
+
+.char:hover {
+    transform: scale(1.1) rotateY(15deg) translateZ(10px);
+    filter: brightness(1.3) drop-shadow(0 0 10px rgba(74, 144, 226, 0.5));
+}
+
+.hero-subtitle {
+    margin-bottom: 3rem;
+}
+
+.hero-subtitle h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: #888;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hero-subtitle h2::before,
+.hero-subtitle h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+}
+
+.hero-subtitle h2::before {
+    left: -80px;
+}
+
+.hero-subtitle h2::after {
+    right: -80px;
+}
+
+.hero-description {
+    margin-bottom: 4rem;
+}
+
+.hero-description p {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    color: #ccc;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-cta {
+    position: relative;
+}
+
+.explore-btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    background: transparent;
+    border: 2px solid #4a90e2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.explore-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-bg {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4a90e2, #7b68ee);
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.explore-btn:hover .btn-bg {
+    left: 0;
+}
+
+.explore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+}
+
+/* 装饰元素 */
+.decorative-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-element {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(74, 144, 226, 0.1), rgba(123, 104, 238, 0.1));
+    animation: float 6s ease-in-out infinite;
+}
+
+.element-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.element-3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.3;
+    }
+}
+
+/* 滚动指示器 */
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, #4a90e2, transparent);
+    margin-bottom: 1rem;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes scrollLine {
+    0% { transform: scaleY(0.5); }
+    50% { transform: scaleY(1); }
+    100% { transform: scaleY(0.5); }
+}
+
+/* 占位内容 */
+.placeholder-content {
+    height: 100vh;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.placeholder-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #888;
+}
+
+.placeholder-content p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-subtitle h2::before,
+    .hero-subtitle h2::after {
+        display: none;
+    }
+
+    .explore-btn {
+        padding: 1.2rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .floating-element {
+        display: none;
+    }
+
+    .scroll-indicator {
+        bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-description p {
+        font-size: 1rem;
+    }
+}
